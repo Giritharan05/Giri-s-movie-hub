@@ -1,0 +1,118 @@
+body {
+    min-height: 100vh;
+    font-family: "Iceberg", sans-serif;
+    background-color: #0c0c0c !important;
+    /* Deeper black */
+}
+
+/* Section visibility */
+.section {
+    display: none;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Movie Cards */
+.movie-card {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 193, 7, 0.2) !important;
+}
+
+.movie-card img {
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.movie-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Vibe Cards on Home Page */
+.vibe-card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.vibe-card:hover {
+    filter: brightness(1.2);
+    transform: scale(1.03);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffc107;
+    border-radius: 10px;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    height: 500px;
+}
+
+.hero-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+    z-index: 2;
+}
+
+.w-fit {
+    width: fit-content;
+}
+
+/* Stat Cards */
+.stat-card {
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: #ffc107 !important;
+}
+
+h2{
+    color: white;
+}
+p{
+    color: rgb(255, 255, 255);
+}
+.card-title{
+    color: white;
+}
